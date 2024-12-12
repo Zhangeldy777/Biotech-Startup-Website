@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tech Startup Portfolio</title>
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/css/styles.css">
+  <style>
+    .products-section {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      align-items: center;
+      gap: 20px;
+      background: #f9f9f9;
+      border: 2px solid #ddd;
+      border-radius: 15px;
+      padding: 20px;
+    }
+
+    .products-text {
+      flex: 1;
+      padding: 20px;
+    }
+
+    .products-video {
+      flex: 1;
+      max-width: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .products-video video {
+      max-width: 100%;
+      border: 2px solid #ddd;
+      border-radius: 10px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    }
+  </style>
+</head>
+<body>
+  <nav class="nav-buttons">
+    <button class="nav-btn" onclick="scrollToSection('about')">About</button>
+    <button class="nav-btn" onclick="scrollToSection('services')">Services</button>
+    <button class="nav-btn" onclick="scrollToSection('products')">Products</button>
+    <button class="nav-btn" onclick="scrollToSection('team')">Team</button>
+    <button class="nav-btn" onclick="scrollToSection('contact')">Contact</button>
+  </nav>
+
+  <video autoplay muted loop id="background-video">
+    <source src="/images and videos/18069473-uhd_2160_3840_24fps.mp4" type="video/mp4">
+  </video>
+
+  <header class="header-background">
+    <div class="nav-buttons">
+      <a href="#about" class="nav-btn">About</a>
+      <a href="#services" class="nav-btn">Services</a>
+      <a href="#products" class="nav-btn">Products</a>
+      <a href="#team" class="nav-btn">Team</a>
+      <a href="#contact" class="nav-btn">Contact</a>
+    </div>
+
+    <div class="header-text">
+      <h1>Welcome to Astana Biomedical Research Startup</h1>
+      <p>Advancing medical innovation through cutting-edge peptide treatments</p>
+    </div>
+
+    <div class="polymorphic-figure" id="polymorphic-figure">
+      <button class="ai-button" id="ai-button">Talk with our AI Delora</button>
+    </div>
+
+    <div class="chat-interface" id="chat-interface">
+      <div class="chat-header">
+        <span>AI Delora</span>
+        <button class="close-button" id="close-chat">X</button>
+      </div>
+      <div class="chat-messages" id="chat-messages"></div>
+      <div class="chat-input">
+        <input type="text" id="user-message" placeholder="Ask Delora anything...">
+        <button id="send-message">Send</button>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <section id="about">
+      <div class="block">
+        <h2>About Us</h2>
+        <p>We are a <span class="highlight">leading biomedical research startup</span> in Kazakhstan specializing in peptide-based intravascular therapies. Our team of scientists and medical researchers are dedicated to advancing peptide treatments that address a wide range of complex medical conditions.</p>
+        <p>Our mission is to harness the power of peptide science to develop <span class="highlight">innovative solutions</span> for improving patient outcomes, while ensuring the highest levels of safety and efficacy.</p>
+      </div>
+    </section>
+
+    <section id="services">
+      <div class="block">
+        <h2>Our Services</h2>
+        <ul>
+          <li><strong>Peptide Therapy Development:</strong> Customized peptide treatments designed to target specific diseases and conditions, offering patients a new frontier in medical care.</li>
+          <li><strong>Biomedical Research:</strong> Cutting-edge research aimed at understanding the therapeutic potential of peptides in treating cancer, neurological diseases, and autoimmune disorders.</li>
+          <li><strong>Clinical Trials:</strong> Advanced clinical trials focusing on peptide-based therapies, ensuring treatments meet rigorous standards before reaching the market.</li>
+          <li><strong>Consulting Services:</strong> Expert guidance for healthcare professionals and companies interested in integrating peptide treatments into their practices and products.</li>
+          <li><strong>Personalized Medicine:</strong> Leveraging the latest advancements in peptides to create personalized treatment plans for patients based on their unique genetic profiles.</li>
+        </ul>
+      </div>
+    </section>
+
+    <section id="products" class="products-section">
+      <div class="block">
+        <h2>Our Products</h2>
+        <p>Our peptide-based products are designed to <span class="highlight">transform healthcare</span> through targeted therapies addressing various medical conditions.</p>
+        <div class="products-content">
+          <div class="products-text">
+            <ul>
+              <li><strong>Peptide Cancer Treatment:</strong> Targeted therapies aimed at reducing tumor size and preventing cancer cell growth.</li>
+              <li><strong>Neuroprotective Peptides:</strong> Designed to promote neurogenesis and alleviate symptoms of neurodegenerative diseases.</li>
+              <li><strong>Immune System Modulation:</strong> Formulations that regulate the immune system, aiding in fighting infections and preventing autoimmune disorders.</li>
+            </ul>
+          </div>
+          <div class="products-video">
+            <video autoplay muted loop controls playsinline>
+              <source src="/images and videos/5741026-uhd_2160_3840_30fps.mp4" type="video/mp4">
+              Your browser does not support the video tag.
+            </video>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="team">
+      <div class="block">
+         <h2>Meet the Team</h2>
+         <p>
+            Our team is composed of world-class researchers, scientists, and medical professionals with expertise in 
+            <span class="highlight">biomedicine</span>, <span class="highlight">peptide research</span>, and 
+            <span class="highlight">pharmaceutical innovation</span>.
+         </p>
+         <div class="team-member">
+            <img src="/images and videos/ChatGPT-generated-image-1.jpeg" alt="Dr. Alikhan Zhumabayev">
+            <div>
+               <p><strong>Dr. Alikhan Zhumabayev:</strong> CEO and Founder, a visionary leader with a Ph.D. in Biochemistry from Stanford University. Dr. Zhumabayev has over 15 years of experience in biomedical research and has successfully launched several biotech startups focused on peptide therapies.</p>
+            </div>
+         </div>
+         <div class="team-member">
+            <img src="/images and videos/ChatGPT-generated-image-2.jpeg" alt="Dr. Aidana Tulegenova">
+            <div>
+               <p><strong>Dr. Aidana Tulegenova:</strong> Chief Scientific Officer, with a Ph.D. in Pharmacology from MIT. Dr. Tulegenova has led numerous groundbreaking studies in peptide science and is a recognized expert in therapeutic peptide design.</p>
+            </div>
+         </div>
+         <div class="team-member">
+            <img src="/images and videos/ChatGPT-generated-image-3.jpeg" alt="Dr. Nursultan Bazarbayev">
+            <div>
+               <p><strong>Dr. Nursultan Bazarbayev:</strong> Lead Researcher, specializing in peptide delivery systems. Dr. Bazarbayev holds a Master’s in Pharmaceutical Sciences from UC Berkeley and has published over 20 papers on peptide formulations and their application in targeted therapy.</p>
+            </div>
+         </div>
+         <div class="team-member">
+            <img src="/images and videos/ChatGPT-generated-image-4.jpeg" alt="Dr. Diana Mukhtarova">
+            <div>
+               <p><strong>Dr. Diana Mukhtarova:</strong> Medical Communications Lead, a graduate of the London School of Economics with a focus on healthcare innovation. Dr. Mukhtarova works closely with healthcare professionals to ensure the seamless adoption of peptide therapies into clinical practices globally.</p>
+            </div>
+         </div>
+      </div>
+   </section>
+   
+
+    <section id="contact">
+      <div class="contact-container">
+        <video autoplay muted loop id="video-background-contact">
+          <source src="/images and videos/11921987_2160_3840_30fps.mp4" type="video/mp4">
+        </video>
+        <div class="contact-form">
+          <h2>Contact Us</h2>
+          <p>If you're interested in learning more about our peptide treatments or would like to collaborate with us, please get in touch.</p>
+          <form id="contactForm">
+            <input type="text" id="email" placeholder="Your Email" required>
+            <small id="error-message" class="hidden" style="color: red; display: none;">Invalid email address. Please include '@'. Example: John.Smith@mail.edu</small><br>
+            <textarea id="message" placeholder="Your Message" required></textarea><br>
+            <button type="submit">Send Message</button>
+          </form>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="footer-content">
+      <div class="contact-info">
+        <p>&copy; 2024 Biomedical Research Startup. All rights reserved.</p>
+        <p><strong>Phone:</strong> +7 (755) 123-4567 | <strong>Fax:</strong> +7 (755) 987-6543</p>
+        <p><strong>Email:</strong> contact@biomedicalstartup.org</p>
+      </div>
+      <div class="social-media">
+        <a href="#" target="_blank">
+          <img src="/images and videos/icons8-facebook-512.png" alt="Facebook" class="social-icon">
+        </a>
+        <a href="#" target="_blank">
+          <img src="/images and videos/icons8-twitterx-512.png" alt="Twitter" class="social-icon">
+        </a>
+        <a href="#" target="_blank">
+          <img src="/images and videos/icons8-linkedin-512.png" alt="LinkedIn" class="social-icon">
+        </a>
+        <a href="#" target="_blank">
+          <img src="/images and videos/icons8-instagram-400.png" alt="Instagram" class="social-icon">
+        </a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="/js/script.js"></script>
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const emailInput = document.getElementById('email');
+      const errorMessage = document.getElementById('error-message');
+      const contactForm = document.getElementById('contactForm');
+
+      contactForm.addEventListener('submit', (e) => {
+        e.preventDefault(); 
+
+        if (!emailInput.value.includes('@')) {
+          errorMessage.style.display = 'inline';
+          setTimeout(() => {
+            errorMessage.style.display = 'none';
+          }, 5000);
+        } else {
+          errorMessage.style.display = 'none';
+          alert('Form submitted successfully!');
+        }
+      });
+    });
+  </script>
+</body>
+</html>
